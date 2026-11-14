@@ -1,0 +1,76 @@
+/* 포인트 컬러는 --accent 값만 바꾸면 됩니다. */
+:root {
+  --background: #090a10;
+  --text: #d9d9e2;
+  --muted: #a3a4b4;
+  --accent: #3b4ca6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 32px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse at 50% 42%, rgba(59, 76, 166, 0.12), transparent 58%),
+    var(--background);
+  color: var(--text);
+  font-family: Arial, "Noto Sans KR", sans-serif;
+}
+
+.profile {
+  width: min(100%, 440px);
+  margin: auto;
+}
+
+h1 {
+  margin: 0 0 30px;
+  color: #f0eff7;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 9vw, 42px);
+  font-weight: 400;
+  letter-spacing: 0.045em;
+  text-align: center;
+}
+
+h1 span {
+  color: var(--accent);
+}
+
+p {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 2.15;
+  letter-spacing: 0.015em;
+  word-break: keep-all;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 28px 25px;
+  }
+
+  .profile {
+    max-width: 390px;
+  }
+
+  h1 {
+    margin-bottom: 26px;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 2.05;
+  }
+}
